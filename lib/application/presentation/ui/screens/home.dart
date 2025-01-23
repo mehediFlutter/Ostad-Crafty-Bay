@@ -1,6 +1,9 @@
-import 'package:crafty_bay/presentation/state_holders/ui/screens/utility/image_assets/image_assets.dart';
+import 'package:crafty_bay/application/presentation/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../widgets/custom_app_bar.dart';
+import 'utility/image_assets/image_assets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,20 +16,26 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Row(
+      appBar: CustomAppBar(),
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(ImageAssets.craftyBayLogoNaVSVG),
-           const Spacer(),
-           CircleAvatar(
-            radius: 15,
-            backgroundColor: Colors.grey.shade300,
-            child: const Icon(Icons.person, color: Colors.grey,),
-           )
+            Expanded(
+              flex: 4,
+              child: SvgPicture.asset(ImageAssets.craftyBayLogoSVG)),
+           Spacer(),
+            CircularProgressIndicator(),
+            height16,
+            Text("Version:1.0.0"),
+            height16,
           ],
         ),
       ),
     );
   }
 }
+
+

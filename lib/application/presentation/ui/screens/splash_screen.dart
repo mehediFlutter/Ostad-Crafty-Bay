@@ -1,9 +1,10 @@
-import 'package:crafty_bay/presentation/state_holders/const.dart';
-import 'package:crafty_bay/presentation/state_holders/ui/screens/home.dart';
-import 'package:crafty_bay/presentation/state_holders/ui/screens/utility/image_assets/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+
+import '../../const.dart';
+import 'home.dart';
+import 'utility/image_assets/image_assets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,13 +20,13 @@ class _SplashScreenState extends State<SplashScreen> {
     goToNextScreen();
   }
 
-  @override
   void goToNextScreen() {
     Future.delayed(const Duration(seconds: 1)).then((value) {
       Get.offAll(HomeScreen());
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
