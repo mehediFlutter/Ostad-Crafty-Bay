@@ -60,7 +60,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   "Next",
                   style: Theme.of(context)
                       .textTheme
-                      .bodySmall
+                      .titleMedium
                       ?.copyWith(color: Colors.white),
                 ),
               ),
