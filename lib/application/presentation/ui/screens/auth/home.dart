@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/circular_icon_button.dart';
+import '../../widgets/home/home_section_title.dart';
 import '../../widgets/home/home_slider.dart';
 import '../utility/image_assets/image_assets.dart';
 
@@ -66,7 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         OutlineInputBorder(borderSide: BorderSide.none),
                   ),
                 ),
-                HomeSlider()
+                HomeSlider(),
+                HomeSectionTitle()
               ],
             ),
           ),
@@ -75,5 +77,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
 
