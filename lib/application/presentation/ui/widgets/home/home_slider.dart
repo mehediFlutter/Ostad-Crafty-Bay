@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../../const.dart';
-import '../screens/utility/app_colors.dart';
+import '../../../const.dart';
+import '../../screens/utility/app_colors.dart';
 
 class HomeSlider extends StatefulWidget {
   const HomeSlider({super.key});

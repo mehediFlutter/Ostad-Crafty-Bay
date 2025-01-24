@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/circular_icon_button.dart';
-import '../../widgets/home_slider.dart';
+import '../../widgets/home/home_slider.dart';
 import '../utility/image_assets/image_assets.dart';
 
 class HomeScreen extends StatefulWidget {
