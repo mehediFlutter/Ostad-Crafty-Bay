@@ -9,15 +9,50 @@ class CreaftyBay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      
       theme: ThemeData(
         primarySwatch: MaterialColor(AppColor.primary.value, AppColor().color),
-        primaryColor: AppColor.primary,
-        progressIndicatorTheme:
-            const ProgressIndicatorThemeData(color: Color(0xFF07ADAE)),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.primary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+  contentPadding: EdgeInsets.symmetric(horizontal: 15),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: Colors.grey),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: Colors.grey),
+  ),
+  focusedBorder: OutlineInputBorder(
+    
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: AppColor.primary),
+  ),
+  errorBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: Colors.red),
+  ),
+  focusedErrorBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: Colors.red),
+  ),
+  disabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(5),
+    borderSide: BorderSide(color: Colors.grey),
+  ),
+),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch:
+              MaterialColor(AppColor.primary.value, AppColor().color),
+        ),
       ),
       home: SplashScreen(),
-  
     );
   }
 }

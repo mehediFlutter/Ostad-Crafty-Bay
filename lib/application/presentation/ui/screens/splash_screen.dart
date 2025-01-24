@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../const.dart';
+import 'auth/email_verification_screen.dart';
 import 'home.dart';
 import 'utility/image_assets/image_assets.dart';
 
@@ -22,7 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void goToNextScreen() {
     Future.delayed(const Duration(seconds: 1)).then((value) {
-      Get.offAll(HomeScreen());
+      Get.offAll(EmailVerificationScreen());
+      //HomeScreen
     });
   }
 

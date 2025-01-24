@@ -2,17 +2,18 @@ import 'package:crafty_bay/application/presentation/const.dart';
 import 'package:crafty_bay/application/presentation/ui/re_usable_mother_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../utility/image_assets/image_assets.dart';
 
-class EmailVerificationScreen extends StatefulWidget {
-  const EmailVerificationScreen({super.key});
+import 'utility/image_assets/image_assets.dart';
+
+class OTPScreen extends StatefulWidget {
+  const OTPScreen({super.key});
 
   @override
-  State<EmailVerificationScreen> createState() =>
-      _EmailVerificationScreenState();
+  State<OTPScreen> createState() =>
+      _OTPScreenState();
 }
 
-class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
+class _OTPScreenState extends State<OTPScreen> {
   @override
   Widget build(BuildContext context) {
     return ReUsableMotherWidget(
