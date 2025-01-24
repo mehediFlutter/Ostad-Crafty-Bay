@@ -3,6 +3,7 @@ import 'package:crafty_bay/application/presentation/ui/re_usable_mother_widget.d
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../widgets/circular_icon_button.dart';
 import '../utility/image_assets/image_assets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,29 +47,3 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class CircularIconButton extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
-  const CircularIconButton({
-    super.key,
-    required this.icon,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(30),
-      onTap: onTap,
-      child: CircleAvatar(
-        radius: 16,
-        backgroundColor: Colors.grey.shade300,
-        child: Icon(
-          icon,
-          color: Colors.grey,
-          size: 20,
-        ),
-      ),
-    );
-  }
-}
