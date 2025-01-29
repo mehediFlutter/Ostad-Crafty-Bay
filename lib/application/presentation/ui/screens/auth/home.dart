@@ -1,12 +1,11 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:crafty_bay/application/presentation/const.dart';
-import 'package:crafty_bay/application/presentation/ui/screens/utility/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/circular_icon_button.dart';
 import '../../widgets/home/home_section_title.dart';
 import '../../widgets/home/home_slider.dart';
+import '../../widgets/home/product_card.dart';
 import '../utility/image_assets/image_assets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -72,60 +71,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'Categorize',
                   onTap: () {},
                 ),
-                Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                SizedBox(
+                  height: 160,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 20,
+                    itemBuilder: (context, index) {
+                      return ProductCard();
+                    },
                   ),
-                  shadowColor: AppColor.primary.withOpacity(0.1),
-                  child: SizedBox(
-                    width: 100,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: AppColor.primary.withOpacity(0.1),
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(8),
-                              topLeft: Radius.circular(8),
-                            ),
-                            image: DecorationImage(
-                              image: NetworkImage(''),
-                            ),
-                          ),
-                        ),
-                        Text(
-                          'Nike show AK50479',
-                          maxLines: 1,
-                          style: TextStyle(overflow: TextOverflow.ellipsis),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("\$90"),
-                            Icon(
-                              Icons.star_border,
-                              color: Colors.amber,
-                              size: 14,
-                            ),
-                            Card(
-                              color: AppColor.primary,
-                              child: Padding(
-                                padding: const EdgeInsets.all(2),
-                                child: Icon(
-                                  Icons.favorite_outline,
-                                  size: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                )
               ],
             ),
           ),
@@ -134,3 +89,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
