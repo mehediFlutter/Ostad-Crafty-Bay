@@ -1,4 +1,5 @@
 import 'package:crafty_bay/application/presentation/ui/screens/auth/home.dart';
+import 'package:crafty_bay/application/presentation/ui/screens/category_list_screen/category_list_screen.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/utility/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
   int _currentIndex = 0;
   List<Widget> _screens = [
     const HomeScreen(),
-    const HomeScreen(),
+    const CategoryListScreen(),
     const HomeScreen(),
     const HomeScreen(),
   ];
@@ -37,10 +38,10 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
 
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.dashboard),label: 'Categories'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: 'Cart'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: 'Wishlist'),
+         
         ],
       ),
     ));

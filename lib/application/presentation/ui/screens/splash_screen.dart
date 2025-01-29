@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../const.dart';
-import 'auth/email_verification_screen.dart';
 import 'auth/home.dart';
+import 'bottom_nav_base_screen.dart';
 import 'utility/image_assets/image_assets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void goToNextScreen() {
     Future.delayed(const Duration(seconds: 1)).then((value) {
-      Get.offAll(HomeScreen());
+      Get.offAll(BottomNavBaseScreen());
       //HomeScreen
     });
   }
