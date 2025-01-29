@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-
 import '../../const.dart';
-import 'auth/home.dart';
 import 'bottom_nav_base_screen.dart';
 import 'utility/image_assets/image_assets.dart';
 

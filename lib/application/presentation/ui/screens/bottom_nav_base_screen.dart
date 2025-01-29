@@ -1,8 +1,10 @@
+import 'package:crafty_bay/application/presentation/state_holder/bottom_nav_controller.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/auth/home.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/auth/wish_list_screen/wish_list_screen.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/category_list_screen/category_list_screen.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/utility/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BottomNavBaseScreen extends StatefulWidget {
   const BottomNavBaseScreen({super.key});
@@ -12,7 +14,7 @@ class BottomNavBaseScreen extends StatefulWidget {
 }
 
 class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
-  int _currentIndex = 0;
+  BottomNavController bottomNavController = Get.put(BottomNavController());
   List<Widget> _screens = [
     const HomeScreen(),
     const CategoryListScreen(),
@@ -23,15 +25,14 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      body: _screens[_currentIndex],
+      body: GetBuilder<BottomNavController>(
+        builder: (controller) {
+          return _screens[bottomNavController.currentIndex];
+        }
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          _currentIndex = index;
-          if (mounted) {
-            setState(() {});
-          }
-        },
+        currentIndex: bottomNavController.currentIndex,
+        onTap: bottomNavController.changeIndex,
         selectedItemColor: AppColor.primaryColor,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
