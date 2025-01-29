@@ -47,7 +47,7 @@ class _HomeSliderState extends State<HomeSlider> {
                 ValueListenableBuilder(
                   valueListenable: _selectedSlider,
                   builder: (context, value, _) {
-                    print("Rebuild");
+                //    print("Rebuild");
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
