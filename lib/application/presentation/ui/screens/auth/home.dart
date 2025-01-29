@@ -80,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
+                height16,
                 HomeSectionTitle(
                   title: 'Categorize',
                   onTap: () {},
@@ -94,8 +95,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
+                   height16,
                 HomeSectionTitle(
-                  title: 'Categorize',
+                  title: 'Popular',
                   onTap: () {},
                 ),
                 SizedBox(
@@ -108,8 +110,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
+                   height16,
                 HomeSectionTitle(
-                  title: 'Categorize',
+                  title: 'Special',
+                  onTap: () {},
+                ),
+                SizedBox(
+                  height: 160,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return ProductCard();
+                    },
+                  ),
+                ),
+                   height16,
+                HomeSectionTitle(
+                  title: 'New',
                   onTap: () {},
                 ),
                 SizedBox(
