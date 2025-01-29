@@ -1,4 +1,5 @@
 import 'package:crafty_bay/application/presentation/ui/screens/auth/home.dart';
+import 'package:crafty_bay/application/presentation/ui/screens/auth/wish_list_screen/wish_list_screen.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/category_list_screen/category_list_screen.dart';
 import 'package:crafty_bay/application/presentation/ui/screens/utility/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
     const HomeScreen(),
     const CategoryListScreen(),
     const HomeScreen(),
-    const HomeScreen(),
+    const WishListScreen(),
   ];
   @override
   Widget build(BuildContext context) {

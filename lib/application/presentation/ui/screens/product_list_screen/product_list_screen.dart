@@ -1,14 +1,14 @@
 import 'package:crafty_bay/application/presentation/ui/widgets/home/product_card.dart';
 import 'package:flutter/material.dart';
 
-class WishListScreen extends StatefulWidget {
-  const WishListScreen({super.key});
+class ProductListScreen extends StatefulWidget {
+  const ProductListScreen({super.key});
 
   @override
-  State<WishListScreen> createState() => _WishListScreenState();
+  State<ProductListScreen> createState() => _ProductListScreenState();
 }
 
-class _WishListScreenState extends State<WishListScreen> {
+class _ProductListScreenState extends State<ProductListScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
