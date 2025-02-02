@@ -14,8 +14,7 @@ class BottomNavBaseScreen extends StatefulWidget {
 }
 
 class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
-  BottomNavController bottomNavController = Get.put(BottomNavController());
-  List<Widget> _screens = [
+  final List<Widget> _screens = [
     const HomeScreen(),
     const CategoryListScreen(),
     const HomeScreen(),
@@ -24,28 +23,29 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      body: GetBuilder<BottomNavController>(
-        builder: (controller) {
-          return _screens[bottomNavController.currentIndex];
-        }
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: bottomNavController.currentIndex,
-        onTap: bottomNavController.changeIndex,
-        selectedItemColor: AppColor.primaryColor,
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,
-        elevation: 4,
-
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.dashboard),label: 'Categories'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: 'Cart'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: 'Wishlist'),
-         
-        ],
-      ),
-    ));
+        child: GetBuilder<BottomNavController>(
+          builder: (controller) {
+            return Scaffold(
+                  body: _screens[controller.currentIndex],
+            
+                  bottomNavigationBar: BottomNavigationBar(
+            currentIndex: controller.currentIndex,
+            onTap: controller.changeIndex,
+            selectedItemColor: AppColor.primaryColor,
+            unselectedItemColor: Colors.grey,
+            showUnselectedLabels: true,
+            elevation: 4,
+            
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home_filled),label: 'Home'),
+              BottomNavigationBarItem(icon: Icon(Icons.dashboard),label: 'Categories'),
+              BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: 'Cart'),
+              BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: 'Wishlist'),
+             
+            ],
+                  ),
+                );
+          }
+        ));
   }
 }

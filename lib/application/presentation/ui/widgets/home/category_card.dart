@@ -15,7 +15,7 @@ class CategoryCard extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 5),
           padding:  EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppColor.primary.withOpacity(0.1),
+          color: AppColor.primary.withAlpha(26),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(Icons.shop,size: 40,color: AppColor.primary,),

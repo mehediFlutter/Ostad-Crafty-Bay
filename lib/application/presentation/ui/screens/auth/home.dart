@@ -1,4 +1,5 @@
 import 'package:crafty_bay/application/presentation/const.dart';
+import 'package:crafty_bay/application/presentation/state_holder/bottom_nav_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -75,9 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 HomeSectionTitle(
                   title: 'Categorize',
                   onTap: () {
-                    Get.to(
-                      CategoryListScreen(),
-                    );
+                   Get.find<BottomNavController>().changeIndex(1);
                   },
                 ),
                 SizedBox(
