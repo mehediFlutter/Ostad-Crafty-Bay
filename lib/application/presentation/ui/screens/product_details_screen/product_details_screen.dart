@@ -1,4 +1,7 @@
+import 'package:crafty_bay/application/presentation/ui/screens/utility/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/home/home_slider.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key});
@@ -10,6 +13,19 @@ class ProductDetailsScreen extends StatefulWidget {
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          leading: BackButton(),
+          backgroundColor: Colors.grey,
+          elevation: 0,
+        ),
+        body: Column(
+          children: [
+            HomeSlider(),
+          ],
+        ),
+      ),
+    );
   }
 }
