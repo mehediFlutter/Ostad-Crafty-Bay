@@ -35,7 +35,7 @@ class _ProductImageSliderState extends State<ProductImageSlider> {
               builder: (BuildContext context) {
                 return Container(
                     width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(color: Colors.amber),
+                    decoration: BoxDecoration(color: Colors.grey.shade400),
                     child: Center(
                       child: Text(
                         'text $i',
